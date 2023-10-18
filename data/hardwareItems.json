@@ -1,11 +1,11 @@
 [
   {
-    "name": "cpu",
-    "priceInCents": 15000,
+    "name": "processor",
+    "priceInCents": 40000,
     "buyOnline": true,
     "inStock": [
-      true,
-      100
+      false,
+      70
     ]
   },
   {

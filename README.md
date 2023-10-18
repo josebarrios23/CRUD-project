@@ -34,7 +34,7 @@ npm run showItem UsZmtij
 npm run destroy UsZmtij
 ```
 
-- `updateInventory(hardwareItems, itemName, newName, newPrice, online, stockStatus, stockNum)`: Updates the inventory of hardware items by modifying the item's name (itemName = specified item) (newItem = name that will be added), price (newPrice), online availability (online), stock status (stockStatus), and stock quantity (stockNum) (NOTE: These parameters ALL have to be filled in order for the code to execute. Will return an error message otherwise). If you'd like to change only one value of the item, add the same values of the item for their respective parameter and change only the desired parameter.
+- `updateInventory(hardwareItems, itemName, newName, newPrice, online, stockStatus, stockNum)`: Updates the inventory of hardware items by modifying the item's name (itemName = specified item) (newItem = name that will be added), price (newPrice), online availability (online), stock status (stockStatus), and stock quantity (stockNum) (NOTE: These parameters ALL have to be filled in order for the code to execute. Will return an error message otherwise). If you'd like to change only one value of the item, add the same values of the item for their respective parameter and change only the desired parameter. (for example: If the item is already called 'processor', the 'newName' value would also be called processor, and each value will be the same as it is for the target item in 'hardwareItems.JSON')
 
 ```
 npm run updateInventory cpu processor 500 true false 70
