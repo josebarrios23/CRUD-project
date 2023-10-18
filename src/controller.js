@@ -70,7 +70,15 @@ function showCart(cart) {
   return cart.map((item) => item.name + ' ' + "$" + (item.priceInCents/ 100).toFixed(2)).join('\n')
 }
 
-function showItem() {}
+function showItem(cart, findId) {
+  const item = cart.find((cartItem) => cartItem.id === findId)
+  if (item === undefined){
+    return "ID was not found"
+  }
+  if (item){
+    return item.name + ' ' + "$" + (((item.priceInCents)/100).toFixed(2)) + " - Item ID: " + item.id
+  }
+}
 
 function destroy() {}
 

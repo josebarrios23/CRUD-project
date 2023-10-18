@@ -22,6 +22,11 @@ function run() {
       updatedItems = add(cart, itemName)
       writeToFile = true
       break;
+
+    case "showItem":
+      const show = showItem(cart, itemName) //'itemName' in this case is the item id
+      inform(show)
+      break;
     default:
       inform('There was an error.')
   }
