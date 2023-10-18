@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "name": "npu",
+    "priceInCents": 11096,
+    "buyOnline": false,
+    "inStock": [
+      true,
+      51
+    ],
+    "id": "GhKXTnt",
+    "amount": 1
+  },
+  {
+    "name": "cpu",
+    "priceInCents": 600,
+    "buyOnline": false,
+    "inStock": [
+      false,
+      90
+    ],
+    "id": "Ayqdmyq",
+    "amount": 2
+  }
+]

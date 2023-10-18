@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "index": "node index.js index",
-    "create": "node index.js create",
-    "show": "node index.js show",
+    "showCart": "node index.js showCart",
+    "add": "node index.js add",
+    "showItem": "node index.js showItem",
     "updateInventory": "node index.js updateInventory",
     "updateCart": "node index.js updateCart",
     "destroy": "node index.js destroy",
