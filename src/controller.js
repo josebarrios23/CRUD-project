@@ -51,23 +51,25 @@ function add(cart, itemName) {
   }
   cart.push(newItem)
   inform("Item not in inventory. Special order created and added to cart")
-  let totalPrice = 0
-      let totalAmount = 0
-      cart.forEach((item) => {
-        totalAmount += item.amount
-        totalPrice += (item.priceInCents * item.amount)
-      })
-      inform(`CART TOTAL: ${((totalPrice/100).toFixed(2))} - AMOUNT OF ITEMS: ${totalAmount}`)
+    let totalPrice = 0
+    let totalAmount = 0
+    cart.forEach((item) => {
+      totalAmount += item.amount
+      totalPrice += (item.priceInCents * item.amount)
+    })
+    inform(`CART TOTAL: ${((totalPrice/100).toFixed(2))} - AMOUNT OF ITEMS: ${totalAmount}`)
   return cart
 }
 
 function showCart(cart) {
   let total = 0
+  let totalAmount = 0
   cart.forEach((item) => {
-    total += item.priceInCents
+    totalAmount += item.amount
+    total += (item.priceInCents * item.amount)
   })
-  inform(`CART TOTAL: ${((total/100).toFixed(2))}`)
-  return cart.map((item) => item.name + ' ' + "$" + (item.priceInCents/ 100).toFixed(2)).join('\n')
+  inform(`CART TOTAL: ${((total/100).toFixed(2))} - AMOUNT OF ITEMS: ${totalAmount}`)
+  return cart.map((item) => item.name + ' ' + "$" + (((item.priceInCents * item.amount)/ 100).toFixed(2)) + " - " + "Amount: " + item.amount ).join('\n')
 }
 
 function showItem(cart, findId) {

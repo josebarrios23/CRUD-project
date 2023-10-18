@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "name": "gpu",
+    "priceInCents": 600,
+    "buyOnline": false,
+    "inStock": [
+      false,
+      90
+    ],
+    "id": "uVHzQlV",
+    "amount": 2
+  },
+  {
+    "name": "npu",
+    "priceInCents": 20993,
+    "buyOnline": true,
+    "inStock": [
+      true,
+      92
+    ],
+    "id": "OHmroKx",
+    "amount": 1
+  },
+  {
+    "name": "vpu",
+    "priceInCents": 8280,
+    "buyOnline": false,
+    "inStock": [
+      false,
+      0
+    ],
+    "id": "ZOblnsg",
+    "amount": 1
+  }
+]
