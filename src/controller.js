@@ -68,7 +68,7 @@ function showCart(cart) {
     totalAmount += item.amount
     total += (item.priceInCents * item.amount)
   })
-  inform(`CART TOTAL: ${((total/100).toFixed(2))} - AMOUNT OF ITEMS: ${totalAmount}`)
+  inform(`CART TOTAL: $${((total/100).toFixed(2))} - AMOUNT OF ITEMS: ${totalAmount}`)
   return cart.map((item) => item.name + ' ' + "$" + (((item.priceInCents * item.amount)/ 100).toFixed(2)) + " - " + "Amount: " + item.amount ).join('\n')
 }
 

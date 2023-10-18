@@ -31,5 +31,16 @@
     ],
     "id": "ZOblnsg",
     "amount": 1
+  },
+  {
+    "name": "something",
+    "priceInCents": 5313,
+    "buyOnline": false,
+    "inStock": [
+      false,
+      0
+    ],
+    "id": "fKqXmpI",
+    "amount": 1
   }
 ]
