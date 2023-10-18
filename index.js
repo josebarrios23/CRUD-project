@@ -47,7 +47,7 @@ function run() {
       break;
 
     case "updateCart":
-        ///All parameters MUST be filled in the terminal. itemName, newName, newPrice, online, stockStatus, stockNum
+        ///All parameters MUST be filled in the terminal. itemName, newName, newPrice, online, stockStatus, stockNum, itemAmount
       updatedItems = updateCart(cart, itemName, newName, newPrice, online, stockStatus, stockNum, itemAmount)
       writeToFile = true
       break;
