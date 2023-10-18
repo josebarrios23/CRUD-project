@@ -46,7 +46,7 @@ npm run updateInventory cpu processor 500 true false 70
 npm run updateCart gpu "graphics processing unit" 500 true false 70
 ```
 
-- `total(cart)`: Calculates and returns the total price of items in the shopping cart.  Enter the following into the terminal to use:
+- `total(cart)`: Calculates and returns ONLY the total price of items in the shopping cart.  Enter the following into the terminal to use:
 
 ```
 npm run total
