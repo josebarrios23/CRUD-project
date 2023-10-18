@@ -1,0 +1,110 @@
+[
+  {
+    "name": "cpu",
+    "priceInCents": 600,
+    "buyOnline": false,
+    "inStock": [
+      false,
+      90
+    ]
+  },
+  {
+    "name": "gpu",
+    "priceInCents": 600,
+    "buyOnline": false,
+    "inStock": [
+      false,
+      90
+    ]
+  },
+  {
+    "name": "ram",
+    "priceInCents": 7999,
+    "buyOnline": false,
+    "inStock": [
+      true,
+      71
+    ]
+  },
+  {
+    "name": "ssd",
+    "priceInCents": 9999,
+    "buyOnline": false,
+    "inStock": [
+      true,
+      60
+    ]
+  },
+  {
+    "name": "motherboard",
+    "priceInCents": 14999,
+    "buyOnline": true,
+    "inStock": [
+      false,
+      0
+    ]
+  },
+  {
+    "name": "power supply",
+    "priceInCents": 7999,
+    "buyOnline": true,
+    "inStock": [
+      false,
+      0
+    ]
+  },
+  {
+    "name": "case",
+    "priceInCents": 5999,
+    "buyOnline": true,
+    "inStock": [
+      true,
+      71
+    ]
+  },
+  {
+    "name": "cooling fan",
+    "priceInCents": 1999,
+    "buyOnline": true,
+    "inStock": [
+      true,
+      60
+    ]
+  },
+  {
+    "name": "keyboard",
+    "priceInCents": 2999,
+    "buyOnline": false,
+    "inStock": [
+      false,
+      0
+    ]
+  },
+  {
+    "name": "mouse",
+    "priceInCents": 1999,
+    "buyOnline": true,
+    "inStock": [
+      false,
+      0
+    ]
+  },
+  {
+    "name": "monitor",
+    "priceInCents": 19999,
+    "buyOnline": true,
+    "inStock": [
+      true,
+      71
+    ]
+  },
+  {
+    "name": "zip ties",
+    "priceInCents": 21974,
+    "buyOnline": false,
+    "inStock": [
+      false,
+      0
+    ]
+  }
+]
