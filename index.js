@@ -27,6 +27,11 @@ function run() {
       const show = showItem(cart, itemName) //'itemName' in this case is the item id
       inform(show)
       break;
+
+    case "destroy":
+      updatedItems = destroy(cart, itemName)
+      writeToFile = true
+      break;
     default:
       inform('There was an error.')
   }

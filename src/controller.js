@@ -80,7 +80,17 @@ function showItem(cart, findId) {
   }
 }
 
-function destroy() {}
+function destroy(cart, id) {
+  const itemIndex = cart.findIndex((item) => item.id === id)
+  if (itemIndex > -1) {
+    cart.splice(itemIndex, 1)
+    inform('Item removed from cart')
+    return cart
+  } else {
+    inform('Item not found in cart')
+    return cart
+  }
+}
 
 function updateInventory() {}
 
