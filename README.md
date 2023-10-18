@@ -16,19 +16,19 @@ The `cartController.js` file contains functions that manipulate the information 
 npm run add cpu
 ```
 
-- `showCart(cart)`: Displays the contents of the shopping cart, listing item names, prices, and calculating the cart total. Enter the following into the terminal to use:
+- `showCart(cart)`: Displays the contents of the shopping cart, listing item names, prices, and calculates the cart total. Enter the following into the terminal to use:
 
 ```
 npm run showCart
 ```
 
-- `showItem(cart, findId)`: Shows the details of a specific item in the cart based on its unique ID.
+- `showItem(cart, findId)`: Shows the details of a specific item in the cart based on its unique ID. Enter the following into the terminal to use:
 
 ```
 npm run showItem UsZmtij
 ```
 
-- `destroy(cart, id)`: Removes an item from the shopping cart based on its unique ID.
+- `destroy(cart, id)`: Removes an item from the shopping cart based on its unique ID. Enter the following into the terminal to use:
 
 ```
 npm run destroy UsZmtij
@@ -46,19 +46,19 @@ npm run updateInventory cpu processor 500 true false 70
 npm run updateCart gpu "graphics processing unit" 500 true false 70
 ```
 
-- `total(cart)`: Calculates and returns the total price of items in the shopping cart.
+- `total(cart)`: Calculates and returns the total price of items in the shopping cart.  Enter the following into the terminal to use:
 
 ```
 npm run total
 ```
 
-- `cancel(cart)`: Empties the shopping cart.
+- `cancel(cart)`: Empties the shopping cart.  Enter the following into the terminal to use:
 
 ```
 npm run cancel
 ```
 
-- `checkStock(hardwareItems)`: Checks the stock of each item inside the inventory (hardwareItems.JSON). Will return the item name, the ammount of the item in stock, and the price in dollars.
+- `checkStock(hardwareItems)`: Checks the stock of each item inside the inventory (hardwareItems.JSON). Will return the item name, the ammount of the item in stock, and the price in dollars.  Enter the following into the terminal to use:
 
 ```
 npm run checkStock
