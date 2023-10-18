@@ -92,7 +92,23 @@ function destroy(cart, id) {
   }
 }
 
-function updateInventory() {}
+function updateInventory(hardwareItems, itemName, newName, newPrice, online, stockStatus, stockNum) {
+  const index = hardwareItems.findIndex((searchItem) => (searchItem.name).toLowerCase() === itemName.toLowerCase())
+  if (index > -1) {
+    let newItemObj = {
+    name: newName.toLowerCase(),
+    priceInCents: Number(newPrice),
+    buyOnline: (online === 'true' ? true : false),
+    inStock: [(stockStatus === 'true' ? true : false), Number(stockNum)]
+    }
+    hardwareItems.splice(index, 1, newItemObj)
+    inform('Item name, price and stock updated')
+    return hardwareItems
+  } else {
+    inform('Item not found')
+    return hardwareItems
+  }
+}
 
 function updateCart() {}
 

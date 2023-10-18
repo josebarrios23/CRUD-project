@@ -7,8 +7,15 @@ const inform = console.log
 function run() {
   const action = process.argv[2]
   const itemName = process.argv[3]
+  const newName = process.argv[4]
+  const newPrice = process.argv[5]
+  const online = process.argv[6]
+  const stockStatus = process.argv[7]
+  const stockNum = process.argv[8]
+  const itemAmount = process.argv[9]
 
   let writeToFile = false
+  let writeToFile2 = false
   let updatedItems = []
 
   switch (action) {
@@ -32,12 +39,22 @@ function run() {
       updatedItems = destroy(cart, itemName)
       writeToFile = true
       break;
+
+    case "updateInventory":
+        ///All parameters MUST be filled in the terminal. itemName, newName, newPrice, online, stockStatus, stockNum
+      updatedItems = updateInventory(hardwareItems, itemName, newName, newPrice, online, stockStatus, stockNum)
+      writeToFile2 = true
+      break;
     default:
       inform('There was an error.')
   }
 
   if (writeToFile) {
     writeJSONFile('./data', 'cart.json', updatedItems)
+  }
+
+  if (writeToFile2) {
+    writeJSONFile('./data', 'hardwareItems.json', updatedItems)
   }
 }
 
