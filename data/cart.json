@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "name": "cpu",
+    "priceInCents": 15000,
+    "buyOnline": true,
+    "inStock": [
+      true,
+      100
+    ],
+    "id": "tPKqMeh",
+    "amount": 3
+  },
+  {
+    "name": "gpu",
+    "priceInCents": 600,
+    "buyOnline": false,
+    "inStock": [
+      false,
+      90
+    ],
+    "id": "SreKQzI",
+    "amount": 3
+  }
+]

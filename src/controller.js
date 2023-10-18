@@ -11,8 +11,8 @@ function add(cart, itemName) {
       let totalPrice = 0
       let totalAmount = 0
       cart.forEach((item) => {
-        totalPrice += item.priceInCents
         totalAmount += item.amount
+        totalPrice += (item.priceInCents * item.amount)
     })
     inform(`CART TOTAL: ${((totalPrice/100).toFixed(2))} - AMOUNT OF ITEMS: ${totalAmount}`)
       return cart
@@ -27,8 +27,8 @@ function add(cart, itemName) {
       let totalPrice = 0
       let totalAmount = 0
       cart.forEach((item) => {
-        totalPrice += item.priceInCents
         totalAmount += item.amount
+        totalPrice += (item.priceInCents * item.amount)
       })
       inform(`CART TOTAL: ${((totalPrice/100).toFixed(2))} - AMOUNT OF ITEMS: ${totalAmount}`)
       return cart
@@ -54,8 +54,8 @@ function add(cart, itemName) {
   let totalPrice = 0
       let totalAmount = 0
       cart.forEach((item) => {
-        totalPrice += item.priceInCents
         totalAmount += item.amount
+        totalPrice += (item.priceInCents * item.amount)
       })
       inform(`CART TOTAL: ${((totalPrice/100).toFixed(2))} - AMOUNT OF ITEMS: ${totalAmount}`)
   return cart
@@ -76,7 +76,7 @@ function showItem(cart, findId) {
     return "ID was not found"
   }
   if (item){
-    return item.name + ' ' + "$" + (((item.priceInCents)/100).toFixed(2)) + " - Item ID: " + item.id
+    return item.name + ' ' + "$" + ((((item.priceInCents)/100)*(item.amount)).toFixed(2)) + " - Item ID: " + item.id + " - Amount: " + item.amount
   }
 }
 
@@ -141,7 +141,7 @@ function updateCart(cart, itemName, newName, newPrice, online, stockStatus, stoc
 function total(cart) {
   let cartTotal = 0
   cart.forEach(item => {
-    cartTotal += item.priceInCents
+    cartTotal += (item.priceInCents * item.amount)
   })
   return `Checkout price: $${((cartTotal/100).toFixed(2))}`
 }
