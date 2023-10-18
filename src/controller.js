@@ -94,6 +94,10 @@ function destroy(cart, id) {
 
 function updateInventory(hardwareItems, itemName, newName, newPrice, online, stockStatus, stockNum) {
   const index = hardwareItems.findIndex((searchItem) => (searchItem.name).toLowerCase() === itemName.toLowerCase())
+  if (!itemName || !newName || !newPrice || !online || !stockStatus || !stockNum){
+    inform("Parameters are incorrect or incomplete")
+    return hardwareItems
+  }
   if (index > -1) {
     let newItemObj = {
     name: newName.toLowerCase(),
@@ -112,6 +116,10 @@ function updateInventory(hardwareItems, itemName, newName, newPrice, online, sto
 
 function updateCart(cart, itemName, newName, newPrice, online, stockStatus, stockNum, itemAmount) {
   const index = cart.findIndex((searchItem) => (searchItem.name).toLowerCase() === itemName.toLowerCase())
+  if (!itemName || !newName || !newPrice || !online || !stockStatus || !stockNum || !itemAmount){
+    inform("Parameters are incorrect or incomplete")
+    return cart
+  }
   if (index > -1) {
     let newItemObj = {
     name: newName.toLowerCase(),
@@ -138,9 +146,22 @@ function total(cart) {
   return `Checkout price: $${((cartTotal/100).toFixed(2))}`
 }
 
-function cancel() {}
+function cancel(cart) {
+  if (cart.length > 0){
+    cart.length = 0
+  }
+  return "Cart cleared"
+}
 
-function checkStock(){}
+function checkStock(hardwareItems){
+  inform("Following items in stock:")
+  let stock = []
+  let list = hardwareItems.filter((item) => item.inStock[0] === true)
+  list.forEach((item) => {
+    stock.push(`Item: "${item.name}" - Price: $${((item.priceInCents)/100).toFixed(2)} - Stock: ${item.inStock[1]}`)
+  })
+  return stock
+}
 
 module.exports = {
   add,

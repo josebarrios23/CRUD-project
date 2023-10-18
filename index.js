@@ -56,6 +56,18 @@ function run() {
       const showTotal = total(cart)
       inform(showTotal)
       break;
+
+    case 'cancel':
+      const clearCart = cancel(cart)
+      inform(clearCart)
+      writeToFile = true
+      break;
+
+    case 'checkStock':
+      const inStock = checkStock(hardwareItems)
+      inform(inStock)
+      break;
+
     default:
       inform('There was an error.')
   }
