@@ -51,6 +51,11 @@ function run() {
       updatedItems = updateCart(cart, itemName, newName, newPrice, online, stockStatus, stockNum, itemAmount)
       writeToFile = true
       break;
+
+    case 'total':
+      const showTotal = total(cart)
+      inform(showTotal)
+      break;
     default:
       inform('There was an error.')
   }

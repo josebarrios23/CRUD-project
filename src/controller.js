@@ -130,7 +130,13 @@ function updateCart(cart, itemName, newName, newPrice, online, stockStatus, stoc
   }
 }
 
-function total() {}
+function total(cart) {
+  let cartTotal = 0
+  cart.forEach(item => {
+    cartTotal += item.priceInCents
+  })
+  return `Checkout price: $${((cartTotal/100).toFixed(2))}`
+}
 
 function cancel() {}
 
