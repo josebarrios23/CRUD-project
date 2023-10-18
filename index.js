@@ -45,6 +45,12 @@ function run() {
       updatedItems = updateInventory(hardwareItems, itemName, newName, newPrice, online, stockStatus, stockNum)
       writeToFile2 = true
       break;
+
+    case "updateCart":
+        ///All parameters MUST be filled in the terminal. itemName, newName, newPrice, online, stockStatus, stockNum
+      updatedItems = updateCart(cart, itemName, newName, newPrice, online, stockStatus, stockNum, itemAmount)
+      writeToFile = true
+      break;
     default:
       inform('There was an error.')
   }

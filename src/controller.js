@@ -110,7 +110,25 @@ function updateInventory(hardwareItems, itemName, newName, newPrice, online, sto
   }
 }
 
-function updateCart() {}
+function updateCart(cart, itemName, newName, newPrice, online, stockStatus, stockNum, itemAmount) {
+  const index = cart.findIndex((searchItem) => (searchItem.name).toLowerCase() === itemName.toLowerCase())
+  if (index > -1) {
+    let newItemObj = {
+    name: newName.toLowerCase(),
+    priceInCents: Number(newPrice),
+    buyOnline: (online === 'true' ? true : false),
+    inStock: [(stockStatus === 'true' ? true : false), Number(stockNum)],
+    id: cart[index].id,
+    amount: Number(itemAmount)
+    }
+    cart.splice(index, 1, newItemObj)
+    inform('Item name, price and stock updated')
+    return cart
+  } else {
+    inform('Item not found')
+    return cart
+  }
+}
 
 function total() {}
 
